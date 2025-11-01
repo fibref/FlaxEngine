@@ -34,8 +34,8 @@ public class msdfgen : DepsModule
             break;
         case TargetPlatform.Linux:
         case TargetPlatform.Mac:
-            // todo
-            //options.OutputFiles.Add(Path.Combine(depsRoot, "msdfgen-core.a"));
+        case TargetPlatform.Android:
+            options.OutputFiles.Add(Path.Combine(depsRoot, "msdfgen-core.a"));
             break;
         default: throw new InvalidPlatformException(options.Platform.Target);
         }
